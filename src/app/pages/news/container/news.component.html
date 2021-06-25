@@ -1,0 +1,20 @@
+<ng-container
+  *ngIf="{
+    country: country$ | async,
+    articles: articles$ | async,
+    updatedDateTime: updatedDateTime$ | async,
+    totalResults: totalResults$ | async
+  } as _"
+>
+  <news-article
+    *ngFor="let article of _.articles"
+    [autor]="article.author"
+    [content]="article.content"
+    [description]="article.description"
+    [publishedAt]="article.publishedAt"
+    [sourceName]="article.source.name"
+    [title]="article.title"
+    [url]="article.url"
+    [urlToImage]="article.urlToImage"
+  ></news-article>
+</ng-container>

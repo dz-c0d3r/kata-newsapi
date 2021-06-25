@@ -1,0 +1,86 @@
+<!-- Item Card -->
+<div
+  class="bg-white rounded-lg shadow-sm hover:shadow-lg duration-500 px-2 sm:px-6 md:px-2 py-4 my-6"
+>
+  <div class="grid grid-cols-12 gap-3">
+    <!-- Meta Column -->
+    <div class="col-span-0 sm:col-span-2 text-center hidden sm:block">
+      <!-- Vote Counts -->
+      <div class="grid grid-rows-2">
+        <div class="inline-block font-medium text-xl">
+          {{ sourceName }}
+        </div>
+      </div>
+      <a>
+        <img [src]="urlToImage" />
+      </a>
+
+      <!-- View Counts -->
+      <div class="grid my-3">
+        <span class="inline-block font-bold text-xs">
+          {{ autor }}
+        </span>
+      </div>
+    </div>
+
+    <!-- Summary Column -->
+    <div class="col-span-12 sm:col-start-3 sm:col-end-13 px-3 sm:px-0">
+      <div class="grid block sm:hidden">
+        <div class="flex flex-wrap">
+          <div class="mr-2">
+            <div class="inline-block font-light capitalize">
+              <i class="uil uil-arrow-circle-up mr-1"></i>
+              <span class="text-sm">
+                {{ sourceName }}
+              </span>
+            </div>
+          </div>
+          <div class="mr-2">
+            <div class="inline-block font-light capitalize">
+              <i class="uil uil-check-circle mr-1"></i>
+              <span class="text-sm">
+                <img [src]="urlToImage" />
+              </span>
+            </div>
+          </div>
+          <div class="mr-2">
+            <div class="inline-block">
+              <i class="uil uil-eye mr-1"></i>
+              <span class="text-sm capitalize font-light">
+                {{ autor }}
+              </span>
+            </div>
+          </div>
+
+          <div class="mr-2">
+            <div class="inline-block">
+              <i class="uil uil-clock mr-1"></i>
+              <span class="text-sm font-light">
+                {{ publishedAt | date: "dd/MM/yyyy":"GMT" }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-between items-center hidden sm:block">
+        <span class="font-light text-gray-600">
+          {{ publishedAtDate | date: "dd/MM/yyyy HH:mm:ss":"GMT" }}
+        </span>
+      </div>
+
+      <div class="mt-2">
+        <a
+          [href]="url"
+          class="sm:text-sm md:text-md lg:text-lg text-gray-700 font-bold hover:underline"
+        >
+          {{ title }}
+        </a>
+
+        <p class="mt-2 text-gray-600 text-sm md:text-md">
+          {{ description }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
