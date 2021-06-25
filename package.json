@@ -2,7 +2,7 @@
   "name": "news-api",
   "version": "0.0.0",
   "description": "KATA for VALLOUREC",
-  "repository": "https://github.com/dz-c0d3r/converter.git",
+  "repository": "https://github.com/dz-c0d3r/kata-newsapi.git",
   "author": "Nadji BABARI",
   "license": "MIT",
   "private": true,
